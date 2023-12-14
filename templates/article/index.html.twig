@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ArticleController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+    <div class="example-wrapper">
+    <h1>Liste des articles</h1>
+    <p>Voici les articles :</p>
+
+    <a href="{{ path('app_createArticle') }}">Créer un article </a> | 
+
+
+    <table class="table">
+    
+    <thead>
+    <th> Titre </th>
+    <th> Description </th>
+    <th> Tag </th>
+    <th colspan="3">Actions</th>
+    </thead>
+
+    {% if (articles == null) %}
+        <tr>
+            <td colspan="6">Il n'y a pas d'articles</td>
+        </tr>
+    {% else %}
+
+    <tbody>
+    {% for article in articles %}
+    <tr>
+    <td>{{ article.titre }}</td>
+    <td>{{ article.description }}</td>
+    <td>{{ article.tag }}</td>
+    <td><a href="{{ path('app_showArticle', {id : article.id}) }}">Afficher</a></td>
+    <td><a href="{{ path('app_updateArticle', {id : article.id}) }}">Modifier</a></td> 
+    <td><a href="{{ path('app_removeArticle', {id : article.id}) }}">Supprimer</a></td> 
+    </tr>    
+    {% endfor %}
+    </tbody>
+    {% endif %}
+    </table>
+
+    </div>
+{% endblock %}
