@@ -3,14 +3,23 @@
 
 
 {% block body %}
+
+
+    <div class="example-wrapper">
+
     <h1>Formulaire d'inscription</h1>
-    <a href="{{ path("app_home") }}">retour</a>
     <form action="{{ path("app_register") }}" method="post">
         <label for="username">username</label>
-        <input type="text" name="username" placeholder="pseudo" id="username">
+        <input type="text" name="username" placeholder="pseudo" id="username" class="form-control">
         <label for="password">password</label>
-        <input type="password" name="password" id="password" placeholder="mot de passe">
-        <input type="submit" value="envoyer">
+        <input type="password" name="password" id="password" placeholder="mot de passe" class="form-control">
+        <input type="submit" value="envoyer" class="btn btn-primary mt-4">
+        &nbsp;
+        <a href="{{ path("app_home") }}"><button class="btn btn-outline-secondary mt-4">retour</button></a>
+
     </form>
     <p>{{ message }}</p>
+
+    </div>
+
 {% endblock %}

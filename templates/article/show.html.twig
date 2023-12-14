@@ -3,29 +3,34 @@
 {% block title %}Hello ArticleController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
     <div class="example-wrapper">
     <h1>Détail d'un article</h1>
+    
+    <br>
 
-     <p>
-        <table class="table">
-        <tr>
-        <td>Titre :</td>
-        <td>{{ article.titre }}</td>
-        </tr>
-        <tr>
-        <td>Description :</td>
-        <td>{{ article.description }}</td>
-        </tr>
-        <tr>
-        <td>Tag :</td>
-        <td>{{ article.tag }}</td>
-        </tr>
-        </table>
-    </p>
+    <label>Titre :</label>
+    <table>
+    <tr><td>{{ article.titre }}</td></tr>
+    </table>
+
+    <br>
+
+    <label>Description :</label>
+    <table>
+    <tr><td>{{ article.description }}</td></tr>
+    </table>
+
+    <br>
+
+    <label>Tag :</label>
+    <table>
+    <tr><td>{{ article.tag }}</td></tr>
+    </table>
+
+    <br>
+
+    <a href="{{ path('app_article') }}" ><button type="button" class="btn btn-primary mt-4">Retour </button></a>
+
 
 {% endblock %}

@@ -1,3 +1,53 @@
-body {
-    background-color: skyblue;
+.mainbody {
+    background: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:100vh;
+}
+
+
+.example-wrapper 
+{ 
+    max-width: 70vw; width: 95%; font: 18px/1.5 sans-serif; padding:50px; margin:0 auto; 
+
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        
+}
+.example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+
+a:link
+{
+    font: 18px/1.5 sans-serif;
+}
+
+table
+{
+    width: fit-content;
+    table-layout:fixed;
+    border-collapse: collapse;
+    border-radius: 1em;
+    overflow: hidden;
+    padding: 10px;
+}
+
+td
+{
+    word-wrap:break-word;
+}
+
+.thaction
+{
+    width:min-content;
+    width:40%;
+}
+
+hr
+{
+    color:grey;
 }
